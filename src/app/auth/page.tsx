@@ -31,7 +31,7 @@ const Auth = () => {
       await signIn("credentials", {
         email,
         password,
-        callbackUrl: "/profile",
+        callbackUrl: "netflix-clone-projects.vercel.app/profile",
       });
 
       console.log("Login Success");
@@ -57,7 +57,7 @@ const Auth = () => {
       if (error.message === "Email and password are required") {
         alert("Email and password are required");
       }
-      router.push("/auth");
+      router.push("netflix-clone-projects.vercel.app/auth");
     }
   }, [user, login]);
 
@@ -113,7 +113,7 @@ const Auth = () => {
               <div
                 onClick={() =>
                   signIn("github", {
-                    callbackUrl: "/profile",
+                    callbackUrl: "netflix-clone-projects.vercel.app/profile",
                   })
                 }
                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition"
@@ -121,7 +121,11 @@ const Auth = () => {
                 <FaGithub size={32} />
               </div>
               <div
-                onClick={() => signIn("google", { callbackUrl: "/profile" })}
+                onClick={() =>
+                  signIn("google", {
+                    callbackUrl: "netflix-clone-projects.vercel.app/profile",
+                  })
+                }
                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition"
               >
                 <FcGoogle size={32} />
