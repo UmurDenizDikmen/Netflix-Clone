@@ -41,7 +41,7 @@ const Auth = () => {
       } else {
         alert("Email or password is wrong");
       }
-      router.push("/auth");
+      router.push("/profile");
     }
   }, [email, password]);
 
