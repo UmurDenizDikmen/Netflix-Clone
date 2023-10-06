@@ -43,7 +43,7 @@ const Auth = () => {
       }
       router.push("/auth");
     }
-  }, [email, password]);
+  }, [email, password, router]);
 
   const register = useCallback(async () => {
     try {
@@ -59,7 +59,7 @@ const Auth = () => {
       }
       router.push("/auth");
     }
-  }, [user, login]);
+  }, [email, password, user, login, router]);
 
   return (
     <div className="relative h-screen w-screen bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
@@ -113,7 +113,7 @@ const Auth = () => {
               <div
                 onClick={() =>
                   signIn("github", {
-                    callbackUrl: "/profile",
+                    callbackUrl: "/",
                   })
                 }
                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition"
