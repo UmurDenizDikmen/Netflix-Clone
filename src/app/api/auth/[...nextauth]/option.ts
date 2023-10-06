@@ -58,7 +58,7 @@ export const options: NextAuthOptions = {
     }),
   ],
   pages: {
-    signIn: "/auth",
+    signIn: "/profile",
   },
   debug: process.env.NODE_ENV === "development",
   adapter: PrismaAdapter(prisma),
