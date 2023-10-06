@@ -58,7 +58,7 @@ export const options: NextAuthOptions = {
     }),
   ],
   pages: {
-    signIn: "/auth",
+    signIn: "netflix-clone-projects.vercel.app/auth",
   },
   debug: process.env.NODE_ENV === "development",
   adapter: PrismaAdapter(prisma),
