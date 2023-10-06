@@ -113,7 +113,7 @@ const Auth = () => {
               <div
                 onClick={() =>
                   signIn("github", {
-                    callbackUrl: "/profile",
+                    callbackUrl: "netflix-clone-projects.vercel.app/profile",
                   })
                 }
                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition"
@@ -121,7 +121,11 @@ const Auth = () => {
                 <FaGithub size={32} />
               </div>
               <div
-                onClick={() => signIn("google", { callbackUrl: "/profile" })}
+                onClick={() =>
+                  signIn("google", {
+                    callbackUrl: "netflix-clone-projects.vercel.app/profile",
+                  })
+                }
                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition"
               >
                 <FcGoogle size={32} />

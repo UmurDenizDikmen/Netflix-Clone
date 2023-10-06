@@ -14,7 +14,7 @@ const AccountMenu = ({ visible }: AccountMenuProps) => {
     try {
       const response = await axios.get("/api/logout");
       console.log("Logout success", response);
-      router.push("/auth");
+      router.push("netflix-clone-projects.vercel.app/auth");
     } catch (error: any) {
       console.log("Logout Failed", error.message);
     }
