@@ -43,7 +43,7 @@ const Auth = () => {
       }
       router.push("/auth");
     }
-  }, [email, password, router]);
+  }, [email, password]);
 
   const register = useCallback(async () => {
     try {
@@ -57,9 +57,9 @@ const Auth = () => {
       if (error.message === "Email and password are required") {
         alert("Email and password are required");
       }
-      // router.push("/auth");
+      router.push("/auth");
     }
-  }, [email, password, user, login, router]);
+  }, [user, login]);
 
   return (
     <div className="relative h-screen w-screen bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
