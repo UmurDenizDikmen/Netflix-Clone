@@ -31,8 +31,8 @@ const Auth = () => {
       await signIn("credentials", {
         email,
         password,
+        callbackUrl: "/profile",
       });
-      router.push("profile");
 
       console.log("Login Success");
     } catch (error: any) {
@@ -41,7 +41,7 @@ const Auth = () => {
       } else {
         alert("Email or password is wrong");
       }
-      router.push("/auth");
+      router.push("/profile");
     }
   }, [email, password]);
 
