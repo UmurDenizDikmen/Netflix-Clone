@@ -57,7 +57,7 @@ const Auth = () => {
       if (error.message === "Email and password are required") {
         alert("Email and password are required");
       }
-      router.push("/auth");
+      //router.push("/profile");
     }
   }, [user, login]);
 
