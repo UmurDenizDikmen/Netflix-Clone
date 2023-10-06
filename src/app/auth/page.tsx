@@ -35,8 +35,6 @@ const Auth = () => {
       });
 
       console.log("Login Success");
-
-      router.push("/profile");
     } catch (error: any) {
       if (error.message === "Email and password are required") {
         alert("Email and password are required");
@@ -45,7 +43,7 @@ const Auth = () => {
       }
       router.push("/auth");
     }
-  }, [email, password, router]);
+  }, [email, password]);
 
   const register = useCallback(async () => {
     try {
